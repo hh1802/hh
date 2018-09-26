@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    编辑学生信息
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    id :<input type="text" name="id" value="{{stu.s_id}}">
+    姓名：<input type="text" name="username" value="{{stu.s_name}}">
+    年龄: <input type="text" name="age" value="{{stu.s_age}}">
+    <input type="submit">
+</form>
+{% endblock %}

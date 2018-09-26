@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    分页信息--学生
+{% endblock %}
+{% block content %}
+
+        <ul>
+            {% for stu1 in stu %}
+            <li>id:{{stu1.s_id}}</li>
+            <li>姓名:{{stu1.s_name}}</li>
+            {% endfor %}
+        </ul>
+        总页数:{{paginate.pages}}
+        当前第{{paginate.page}}页
+        {% if paginate.has_prev %}
+            <a href="/user/paginate/?page={{paginate.prev_num}}">上一页</a>
+        {% endif %}
+        {% for i in paginate.iter_pages() %}
+            <a href="/user/paginate/?page={{i}}">{{i}}</a>
+        {% endfor%}
+        {% if paginate.has_next %}
+            <a href="/user/paginate/?page={{paginate.next_num}}">下一页</a>
+        {% endif %}
+
+
+{%endblock%}

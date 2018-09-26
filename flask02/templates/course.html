@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    添加课程
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    <select name="course" id="">
+        {% for course in courses %}
+        <option value="{{course.c_id}}">{{course.c_name}}</option>
+        {% endfor %}
+        <input type="submit">
+    </select>
+</form>
+{% endblock %}
+

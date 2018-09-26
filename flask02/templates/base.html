@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+
+    </title>
+    {% block extCSS %}
+        <link rel="stylesheet" href="/static/css/user.css">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+    {% endblock %}
+    {% block extJS%}
+        <script type="text/javascript" src="/static/js/md5.js"></script>
+
+    {%  endblock %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+    学生信息展示
+{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <td>学生id</td>
+        <td>学生姓名</td>
+        <td>学生年龄</td>
+        <td>修改按钮</td>
+    </tr>
+    {% for stu in stu1 %}
+    <tr>
+
+        <td>{{stu.s_id}}</td>
+        <td>{{stu.s_name}}</td>
+        <td>{{stu.s_age}}</td>
+        <td><a href="/user/edit_stus/?id={{stu.s_id}}">编辑</a>|<a href="">删除</a></td>
+        <td><a href="/hello/add_course/?id={{stu.s_id}}">添加课程</a></td>
+        <td><a href="/hello/show_course/{{stu.s_id}}/">查询班级</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
